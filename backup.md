@@ -1,4 +1,4 @@
-* To transfer the exact data from Sheet1 to Sheet2 without overwriting the existing data in Sheet2, you can use the following script:
+### To transfer the exact data from Sheet1 to Sheet2 without overwriting the existing data in Sheet2, you can use the following script:
 
 ```
 function onEdit(e) {
