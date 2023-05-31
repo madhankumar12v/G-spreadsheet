@@ -31,9 +31,9 @@ function createSheetBackup() {
 
 ```
 
-*To use this script:
+#### To use this script:
 
-*Open your Google Sheets file.
+#### Open your Google Sheets file.
 * Go to "Extensions" in the menu, then click on "Apps Script".
 * Replace the values 'YOUR_SPREADSHEET_ID' and 'YOUR_BACKUP_FOLDER_ID' with the appropriate IDs. You can find the spreadsheet ID in the URL of your Google Sheets file, and the folder ID can be obtained from the folder's URL or by right-clicking on the folder and selecting "Get link".
 * Save the script and give it a name.
