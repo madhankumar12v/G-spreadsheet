@@ -36,3 +36,9 @@ function onEdit(e) {
 
 
 ```
+
+* In the above script, you need to specify the desired column numbers in the selectedColumns array. For example, if you want to transfer data from columns A, C, and E, you would set selectedColumns to [1, 3, 5].
+
+* The script extracts the values from the specified columns for the edited row and appends them to the target sheet. The ticked row is then deleted from the source sheet.
+
+* Remember to set up the installable trigger as explained in the previous response to activate the onEdit function.
