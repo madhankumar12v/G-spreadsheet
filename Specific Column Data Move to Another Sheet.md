@@ -1,4 +1,12 @@
+### To automatically append rows to another sheet in Google Sheets when a checkbox is ticked, you can use Google Apps Script. Here's a step-by-step guide to setting it up:
 
+* Open your Google Sheets document.
+
+* Create a new sheet to store the appended rows. For this example, let's name it "Appended Data."
+
+* In the menu bar, click on "Extensions" and select "Apps Script" to open the Apps Script editor.
+
+* In the Apps Script editor, delete any existing code and replace it with the following code:
 
 
 
