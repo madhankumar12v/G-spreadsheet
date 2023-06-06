@@ -1,0 +1,51 @@
+### To automatically append rows to another sheet in Google Sheets when a checkbox is ticked, you can use Google Apps Script. Here's a step-by-step guide to setting it up:
+
+* Open your Google Sheets document.
+
+* Create a new sheet to store the appended rows. For this example, let's name it "Appended Data."
+
+* In the menu bar, click on "Extensions" and select "Apps Script" to open the Apps Script editor.
+
+* In the Apps Script editor, delete any existing code and replace it with the following code:
+
+
+
+```
+function onEdit(e) {
+  var sourceSheet = e.source.getActiveSheet();
+  var targetSheet = e.source.getSheetByName("Sheet3");
+  var range = e.range;
+
+  // Check if the edited cell is in the desired column (e.g., column A for the checkbox)
+  if (range.getColumn() == 87) {
+    // Check if the edited cell is checked
+    if (range.isChecked()) {
+      var row = range.getRow();
+      var lastColumn = sourceSheet.getLastColumn();
+      var sourceData = sourceSheet.getRange(row, 1, 1, lastColumn).getValues()[0];
+
+      var sourceSelectedColumns = [1,3,5]; // Specify the source selected column numbers
+      var targetSelectedColumns = [2,5,6]; // Specify the target selected column numbers
+
+      var targetRow = targetSheet.getLastRow() + 1;
+      
+      // Loop through the selected columns and extract the corresponding data
+      for (var i = 0; i < sourceSelectedColumns.length; i++) {
+        var sourceColumn = sourceSelectedColumns[i];
+        var targetColumn = targetSelectedColumns[i];
+        targetSheet.getRange(targetRow, targetColumn).setValue(sourceData[sourceColumn - 1]);
+      }
+
+      // Delete the ticked row
+      sourceSheet.deleteRow(row);
+    }
+  }
+}
+
+```
+
+* In the above script, you need to specify the desired column numbers in the selectedColumns array. For example, if you want to transfer data from columns A, C, and E, you would set selectedColumns to [1, 3, 5].
+
+* The script extracts the values from the specified columns for the edited row and appends them to the target sheet. The ticked row is then deleted from the source sheet.
+
+* Remember to set up the installable trigger as explained in the previous response to activate the onEdit function.
