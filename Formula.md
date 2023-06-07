@@ -45,3 +45,7 @@ IF(ISBLANK(AU4),"","7th night: "&AU4&CHAR(10)),
 )
 
 ```
+
+```
+=IFERROR(RIGHT(F4, LEN(F4) - FIND("-", F4))," ")
+```
