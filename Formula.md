@@ -3,6 +3,14 @@
 ```
 =ArrayFormula(TEXT(ROW(A1:A48)/48,"hh:mm AM/PM"))
 ```
+### Split Text or Number with Delimiter
+
+```
+=RIGHT(A1, LEN(A1) - FIND("-", A1))
+
+```
+
+
 ### CONCATENATE Formula with Line break
 
 ```
