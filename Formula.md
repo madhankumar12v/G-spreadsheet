@@ -55,3 +55,12 @@ IF(ISBLANK(AU4),"","7th night: "&AU4&CHAR(10)),
 )
 
 ```
+
+### Count_IF Formula
+
+```
+COUNT(IF(Booking intimaion="FALSE" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel confirmation message to customer="FALSE" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Rev ed start="FALSE" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Rev ed end="FALSE" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Chat & inv check="Issue" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Chat & inv check="." and t0._n31482148_!=TODAY(),1,Null))+
+COUNT(IF(Vehicle status="alloted" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Vehicle status="Yet to" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Vehicle status="." and t0._n31482148_!=TODAY(),1,Null))+
+COUNT(IF(Hotel status="Yet" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="Requested" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="Booked" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="NA" and t0._n31482148_!=TODAY(),1,Null))
+
+```
