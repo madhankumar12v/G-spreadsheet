@@ -64,3 +64,14 @@ COUNT(IF(Vehicle status="alloted" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(
 COUNT(IF(Hotel status="Yet" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="Requested" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="Booked" and t0._n31482148_!=TODAY(),1,Null))+COUNT(IF(Hotel status="NA" and t0._n31482148_!=TODAY(),1,Null))
 
 ```
+
+### CASE Formula
+
+```
+CASE
+  WHEN booking = 'avm' THEN 'Pending'
+  WHEN booking = 'madhan' THEN 'Completed'
+  ELSE NULL
+END
+
+```
