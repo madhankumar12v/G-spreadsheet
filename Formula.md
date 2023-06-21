@@ -75,3 +75,18 @@ CASE
 END
 
 ```
+### Import Current Month data only
+
+```
+=FILTER('G-booking Backend'!A2:A13122, MONTH('G-booking Backend'!B2:B13122) = MONTH(TODAY()))
+
+```
+
+### Automatically Increase Number when text appear B column
+
+```
+=IF(B3<>"","TR"&TEXT(ROW(B3)-ROW(B$3)+1,"00"),"")
+
+=IF(B1<>"","TR"&TEXT(ROW(B1)-ROW(B$1)+1,"00"),"")
+
+```
