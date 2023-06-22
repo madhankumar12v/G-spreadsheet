@@ -82,6 +82,13 @@ END
 
 ```
 
+### Import Current specific month data ("Mention the Month")
+```
+=FILTER('G-booking backend'!A2:A13122, TEXT('G-booking backend'!B2:B13122, "mmmm") = "June")
+
+```
+
+
 ### Automatically Increase Number when text appear B column
 
 ```
