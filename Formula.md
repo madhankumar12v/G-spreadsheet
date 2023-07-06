@@ -102,3 +102,7 @@ END
 ```
 =TRANSPOSE(QUERY('Transport Backend'!$A$2:$I$92,"Select B where A = '"&$N11&"'"))
 ```
+
+```
+=TRANSPOSE(QUERY($D$23:$F$28,"select F where D ='"&$G23&"' and E ='"&$H23&"'"))
+```
