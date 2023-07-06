@@ -97,3 +97,8 @@ END
 =IF(B1<>"","TR"&TEXT(ROW(B1)-ROW(B$1)+1,"00"),"")
 
 ```
+### Google Sheet Query
+
+```
+=TRANSPOSE(QUERY('Transport Backend'!$A$2:$I$92,"Select B where A = '"&$N11&"'"))
+```
