@@ -106,3 +106,7 @@ END
 ```
 =TRANSPOSE(QUERY($D$23:$F$28,"select F where D ='"&$G23&"' and E ='"&$H23&"'"))
 ```
+
+```
+=TRANSPOSE(QUERY($C$23:$F$28,"select F where C ='"&$G23&"' and D ='"&$H23&"' and E = "&$I23&" "))
+```
