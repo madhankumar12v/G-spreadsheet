@@ -110,3 +110,14 @@ END
 ```
 =TRANSPOSE(QUERY($C$23:$F$28,"select F where C ='"&$G23&"' and D ='"&$H23&"' and E = "&$I23&" "))
 ```
+
+### Import specific month and Year data ("Mention the Month & Year")
+```
+=QUERY(IMPORTRANGE("https://docs.google.com/spreadsheets/d/1hdBaRUt62UfDc_LYOAEBPiermHCWAfCXbUiQ-1U-HNg/edit#gid=0", "Sheet1!A:I"), "SELECT * WHERE MONTH(Col9) = 6 AND YEAR(Col9) = 2023")
+```
+
+### Text to Date Convert Formula
+```
+=ARRAYFORMULA(IFERROR(IFERROR(REGEXREPLACE(B2:B, 
+ "(\d+)/(\d+)/(\d{2,4})", "$2/$1/$3")*1, B2:B)*1, B2:B))
+```
