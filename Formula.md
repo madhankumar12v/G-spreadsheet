@@ -131,3 +131,18 @@ END
 ```
 =IF(AND(A2<>"",B2<>""),TRIM(CONCATENATE(A2,B2))," ")
 ```
+
+### Filter the data with Condition
+```
+=FILTER(C:C,C:C<>" ")
+```
+
+### Remove the duplicates
+```
+=UNIQUE(A:A)
+```
+
+### Remove the Duplicate with Conditon
+```
+=UNIQUE(FILTER(C2:C, C2:C<>" "))
+```
