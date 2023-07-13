@@ -121,3 +121,8 @@ END
 =ARRAYFORMULA(IFERROR(IFERROR(REGEXREPLACE(B2:B, 
  "(\d+)/(\d+)/(\d{2,4})", "$2/$1/$3")*1, B2:B)*1, B2:B))
 ```
+
+### Formula
+```
+=IFERROR(TRIM(UPPER(SUBSTITUTE($B2,"-","")&VALUE($A2)))," ")
+```
