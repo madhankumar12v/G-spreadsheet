@@ -126,3 +126,8 @@ END
 ```
 =IFERROR(TRIM(UPPER(SUBSTITUTE($B2,"-","")&VALUE($A2)))," ")
 ```
+
+### Check if cell is not  blank then concate two cell other wise " "
+```
+=IF(AND(A2<>"",B2<>""),TRIM(CONCATENATE(A2,B2))," ")
+```
