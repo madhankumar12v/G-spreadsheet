@@ -1,5 +1,4 @@
-###If you enter data in Column B, it will copy the corresponding data from Column A and B to Target sheet
-
+### If you enter data in Column B, it will copy the corresponding data from Column A and B to Target sheet
 
 
 ```
