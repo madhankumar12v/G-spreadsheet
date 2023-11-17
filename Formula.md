@@ -160,6 +160,6 @@ END
 QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
 ```
 
-**TODAY() returns the current date.
-**TEXT(TODAY(), "yyyy-mm-dd") formats the current date as "YYYY-MM-DD" because the date format in the QUERY function should be in the "YYYY-MM-DD" format.
-**The date keyword is used to indicate that you are comparing with a date.
+* TODAY() returns the current date.
+* TEXT(TODAY(), "yyyy-mm-dd") formats the current date as "YYYY-MM-DD" because the date format in the QUERY function should be in the "YYYY-MM-DD" format.
+* The date keyword is used to indicate that you are comparing with a date.
