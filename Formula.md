@@ -152,3 +152,14 @@ END
 =IMPORTRANGE("https://docs.google.com/spreadsheets/d/1S_pJ5WTt4vIQskHzfgsj6xhwBWnpyYPts1zk_PBEtuI", "SheetName!A22610:H")
 
 ```
+
+
+### If you want to use the current date in the WHERE clause of a Google Sheets QUERY function, you can use the TODAY() function. Assuming you want to compare the date in column G with the current date, you can modify your formula like this:
+
+```
+QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
+```
+
+**TODAY() returns the current date.
+**TEXT(TODAY(), "yyyy-mm-dd") formats the current date as "YYYY-MM-DD" because the date format in the QUERY function should be in the "YYYY-MM-DD" format.
+**The date keyword is used to indicate that you are comparing with a date.
