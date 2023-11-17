@@ -163,3 +163,10 @@ QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(),
 * TODAY() returns the current date.
 * TEXT(TODAY(), "yyyy-mm-dd") formats the current date as "YYYY-MM-DD" because the date format in the QUERY function should be in the "YYYY-MM-DD" format.
 * The date keyword is used to indicate that you are comparing with a date.
+
+
+### If you want to select rows where the date in column G is less than the current date, you can use the following formula:
+```
+QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G < date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
+```
+* In this formula, G < date '" & TEXT(TODAY(), "yyyy-mm-dd") & "' specifies the condition that the date in column G should be less than the current date. The TEXT(TODAY(), "yyyy-mm-dd") part formats the current date in the required format for the QUERY function.
