@@ -157,7 +157,7 @@ END
 ### If you want to use the current date in the WHERE clause of a Google Sheets QUERY function, you can use the TODAY() function. Assuming you want to compare the date in column G with the current date, you can modify your formula like this:
 
 ```
-QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
+=QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
 ```
 
 * TODAY() returns the current date.
@@ -167,6 +167,6 @@ QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G = date '" & TEXT(TODAY(),
 
 ### If you want to select rows where the date in column G is less than the current date, you can use the following formula:
 ```
-QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G < date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
+=QUERY(Task!A:I, "SELECT A, B, C, D, E, F, H, I WHERE G < date '" & TEXT(TODAY(), "yyyy-mm-dd") & "'")
 ```
 * In this formula, G < date '" & TEXT(TODAY(), "yyyy-mm-dd") & "' specifies the condition that the date in column G should be less than the current date. The TEXT(TODAY(), "yyyy-mm-dd") part formats the current date in the required format for the QUERY function.
